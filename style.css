@@ -1,0 +1,19 @@
+/* Base Reset and Global Styling */
+:root {
+    --color-primary: #f0f0f0;       /* Off-White/Blueprint background */
+    --color-secondary: #ffffff;     /* Pure White for clean cards */
+    --color-text-dark: #1a1a1a;     /* Near-Black for main text */
+    --color-text-light: #444444;    /* Dark Gray for secondary text */
+    --color-accent-blue: #0077ff;   /* Electric Blue for links/accents (Precision) */
+    --color-accent-dark: #004499;   /* Darker Blue for hover states */
+    --font-heading: 'Poppins', sans-serif; /* Clean, bold title font */
+    --font-body: 'Roboto Mono', monospace; /* Monospace for technical/code feel */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
