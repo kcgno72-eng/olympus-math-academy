@@ -3,63 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olympus Math Academy | Elite Olympiad Training</title>
+    <title>Archimedes Blueprint | Olympiad Mastery</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">OLYMPUS</div>
+    <header class="blueprint-header">
+        <div class="logo">$$\sum$$ $\text{ARCHIMEDES}$</div>
         <nav>
-            <a href="#courses">Courses</a>
-            <a href="#trainers">Mentors</a>
-            <a href="#pricing">Enroll</a>
-            <a href="#login" class="btn-cta">Log In</a>
+            <a href="#curriculum">CURRICULUM</a>
+            <a href="#methodology">METHODOLOGY</a>
+            <a href="#enroll">ENROLL</a>
+            <a href="#login" class="btn-primary">LOG IN</a>
         </nav>
     </header>
 
-    <section id="hero" class="hero-section">
+    <section id="hero" class="hero-schematic">
         <div class="hero-content">
-            <h1>Master the Art of Mathematical Proof.</h1>
-            <p>Exclusive, personalized training for the world's most prestigious Math Olympiads.</p>
-            <a href="#enroll" class="btn-primary">Begin Your Journey</a>
-            <p class="trust-signal">Trusted by medalists in 10+ countries.</p>
+            <h1>The Solution Is Your Blueprint.</h1>
+            <p>Precise, structured, and challenging training for elite mathematical competitions. Master the four pillars of Olympiad math.</p>
+            <a href="#start" class="btn-cta">START THE PROOF</a>
+            <div class="code-line">
+                $$\text{If } \text{Dedication} = 1, \text{ then } \text{Result} \geq \text{IMO Medal}$$
+            </div>
         </div>
     </section>
 
-    <section id="features" class="section-padded">
-        <h2>Why Olympus?</h2>
+    <section id="features" class="section-grid">
+        <h2>Four Pillars of Mastery</h2>
         <div class="feature-grid">
             <div class="feature-card">
-                <h3>Structured Curriculum</h3>
-                <p>Deep dives into Number Theory, Combinatorics, Algebra, and Geometry.</p>
+                <h3>Number Theory</h3>
+                <p>Modular Arithmetic, Diophantine Equations, and advanced Prime Factorization.</p>
             </div>
             <div class="feature-card">
-                <h3>Expert Mentorship</h3>
-                <p>Learn from former IMO Gold Medalists and Ph.D. Mathematicians.</p>
+                <h3>Combinatorics</h3>
+                <p>Pigeonhole Principle, Generating Functions, and advanced Graph Theory.</p>
             </div>
             <div class="feature-card">
-                <h3>Adaptive Practice</h3>
-                <p>Our algorithm selects problems tailored to your current skill level and weaknesses.</p>
+                <h3>Functional Algebra</h3>
+                <p>Inequalities, Polynomial Roots (Vieta's Formulas), and Functional Equations.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Synthetic Geometry</h3>
+                <p>Inversion, Projective Geometry, and advanced Complex Numbers.</p>
             </div>
         </div>
     </section>
-
-    <section id="cta-banner">
-        <div class="cta-content">
-            <h2>Ready to Achieve Gold?</h2>
-            <p>Enroll today and unlock your full potential.</p>
-            <a href="#enroll-today" class="btn-primary">View Courses</a>
-        </div>
+    
+    <section id="cta-banner" class="cta-banner">
+        <h2>Unlock the Next Level of Mathematical Thinking.</h2>
+        <a href="#register" class="btn-cta-light">ACCESS ELITE PROBLEMS</a>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Olympus Math Academy. Excellence in Mathematics.</p>
-        <div class="footer-links">
-            <a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Contact</a>
-        </div>
+    <footer class="blueprint-footer">
+        <p>$$\text{© 2025 The Archimedes Blueprint. Precision in Mathematics.}$$</p>
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css">
+    <script>
+        // Simple script to render KaTeX math on the page
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('h1, p, .logo, .code-line').forEach(element => {
+                if (element.innerHTML.includes('$$')) {
+                    element.innerHTML = element.innerHTML.replace(/\$\$(.*?)\$\$/g, (match, p1) => {
+                        try {
+                            return katex.renderToString(p1.trim(), {
+                                throwOnError: false,
+                                displayMode: true // Use true for display style math
+                            });
+                        } catch (e) {
+                            return match; // Return original if error
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
